@@ -10,19 +10,8 @@ BIN_PATH="$BUILD_DIR/bin"
 TMP_PATH="$BUILD_DIR/tmp"
 LIB_PATH="$BUILD_DIR/vendor/wkhtmltox/lib"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH $LIB_PATH
-                 
 
-if [ "$STACK" == "cedar-14" ]; then
-  UBUNTU_VERSION="trusty"
-elif [ "$STACK" == "heroku-16" ]; then
-  UBUNTU_VERSION="xenial"
-elif [ "$STACK" == "heroku-18" ]; then
-  UBUNTU_VERSION="bionic"
-else
-  UBUNTU_VERSION="focal"
-fi
-
-WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.${UBUNTU_VERSION}_amd64.deb"
+WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb"
 WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
