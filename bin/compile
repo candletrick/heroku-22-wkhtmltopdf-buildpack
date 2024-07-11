@@ -6,8 +6,7 @@ set -e
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-# BIN_PATH="$BUILD_DIR/bin"
-BIN_PATH="/usr/local/bin"
+BIN_PATH="$BUILD_DIR/.apt/usr/bin"
 TMP_PATH="$BUILD_DIR/tmp"
 LIB_PATH="$BUILD_DIR/vendor/wkhtmltox/lib"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH $LIB_PATH
